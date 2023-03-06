@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HLM-PAPERS : Les HLM dans la Presse (2000-2023)</title>
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Charles-Henri ARNOULD - BECKREL" />
+    <meta name="description" content="Les HLM dans la Presse (2000-2023)" />
+    <meta name=" robots" content="index,nofollow" />
+    <meta property="og:title" content="Les HLM dans la Presse (2000-2023)" />
+    <meta property="og:url" content="https://charnould.github.io/hlm-papers/" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/charnould/hlm-papers/main/docs/assets/social-preview.jpg" />
+    <meta property="og:description" content="Les HLM dans la Presse (2000-2023)" />
+    <!-- Privacy-first analytics (GDPR compliant) -->
+    <script defer data-domain="charnould.github.io" src="https://plausible.io/js/plausible.js"></script>
+    <script src="assets/vega.js" charset="utf-8"></script>
+    <script src="assets/sanddance.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="assets/sanddance.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script>
+      function hide() {
+        document.getElementById('popup').style.display = 'none'
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="popup" id="popup">
+      <p class="popup__close" onclick="hide()">✕</p>
+      <p>
+        Modifier l'affichage des articles/carrés avec les contrôleurs ci-dessus<br />
+        Zoomer, déplacer et naviguer dans les articles comme dans Google Maps<br />
+        Survoler les articles/carrés pour découvrir les titres<br />
+      </p>
+    </div>
+    <header>
+      <div>
+        <h1>LES HLM DANS LA PRESSE &nbsp; &nbsp; &nbsp;</h1>
+        <p>15 000+ articles publiés en PQR/PQN entre 2000 et 2023</p>
+        <a href="https://github.com/charnould/hlm-papers" target="_blank">v.0-alpha &nbsp;•&nbsp; Données, méthodologie et limites (WIP)</a>
+      </div>
+
+      <div class="change">
+        <p>Affichage</p>
+        <select id="yaxis">
+          <option value="publisher">Journal</option>
+          <option value="" disabled>Thématique</option>
+          <option value="" disabled>Sentiment</option>
+          <optgroup label="LOCALISATION">
+            <option value="" disabled>Région</option>
+            <option value="" disabled>Département</option>
+            <option value="" disabled>Ville</option>
+          </optgroup>
+          <optgroup label="PUBLICATION (relative)">
+            <option value="published_on_yyyy">Année</option>
+            <option value="published_on_MMMM">Mois</option>
+            <option value="published_on_eeee">Jour</option>
+          </optgroup>
+          <optgroup label="PUBLICATION (exacte)">
+            <option value="published_on_yyyy">Année</option>
+            <option value="published_on_yyyy_qqq">Trimestre</option>
+            <option value="published_on_yyyy_MM">Mois</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="change">
+        <p>Tri</p>
+        <select id="sortby">
+          <option value="publisher">Journal</option>
+          <option value="" disabled>Thématique</option>
+          <option value="" disabled>Sentiment</option>
+          <optgroup label="LOCALISATION">
+            <option value="" disabled>Région</option>
+            <option value="" disabled>Département</option>
+            <option value="" disabled>Ville</option>
+          </optgroup>
+          <optgroup label="PUBLICATION (relative)">
+            <option value="published_on_yyyy">Année</option>
+            <option value="published_on_MMMM">Mois</option>
+            <option value="published_on_eeee">Jour</option>
+          </optgroup>
+          <optgroup label="PUBLICATION (exacte)">
+            <option value="published_on_yyyy">Année</option>
+            <option value="published_on_yyyy_qqq">Trimestre</option>
+            <option value="published_on_yyyy_MM">Mois</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="change">
+        <p>Couleur</p>
+        <select id="colorby">
+          <option value="publisher">Journal</option>
+          <option value="" disabled>Thématique</option>
+          <option value="" disabled>Sentiment</option>
+          <optgroup label="LOCALISATION">
+            <option value="" disabled>Région</option>
+            <option value="" disabled>Département</option>
+            <option value="" disabled>Ville</option>
+          </optgroup>
+          <optgroup label="PUBLICATION (relative)">
+            <option value="published_on_yyyy">Année</option>
+            <option value="published_on_MMMM">Mois</option>
+            <option value="published_on_eeee">Jour</option>
+          </optgroup>
+          <optgroup label="PUBLICATION (exacte)">
+            <option value="published_on_yyyy">Année</option>
+            <option value="published_on_yyyy_qqq">Trimestre</option>
+            <option value="published_on_yyyy_MM">Mois</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="change">
+        <p>Segmentation</p>
+        <select id="facetby">
+          <option value="none">Aucune</option>
+          <option value="publisher">Journal</option>
+          <option value="" disabled>Thématique</option>
+          <option value="" disabled>Sentiment</option>
+          <optgroup label="LOCALISATION">
+            <option value="" disabled>Région</option>
+            <option value="" disabled>Département</option>
+            <option value="" disabled>Ville</option>
+          </optgroup>
+          <optgroup label="PUBLICATION (relative)">
+            <option value="published_on_yyyy">Année</option>
+            <option value="published_on_MMMM">Mois</option>
+            <option value="published_on_eeee">Jour</option>
+          </optgroup>
+          <optgroup label="PUBLICATION (exacte)">
+            <option value="published_on_yyyy">Année</option>
+            <option value="published_on_yyyy_qqq">Trimestre</option>
+            <option value="published_on_yyyy_MM">Mois</option>
+          </optgroup>
+        </select>
+      </div>
+    </header>
+
+    <div id="vis"></div>
+
+    <script>
+      SandDance.use(vega)
+      var viewer = new SandDance.Viewer(document.getElementById('vis'), {
+        onVegaSpec: (spec) => {
+          const Text_TitleSizeSignal = spec.signals.find((s) => s.name === 'Text_TitleSizeSignal')
+          if (Text_TitleSizeSignal) {
+            Text_TitleSizeSignal.update = 'Text_ScaleSignal * 0'
+          }
+        },
+        colors: {
+          activeCube: 'purple',
+          defaultCube: 'rgba(128,128,128,1)',
+          hoveredCube: 'red',
+          selectedCube: 'yellow',
+          axisText: 'white',
+          gridLine: 'black',
+          backgroundColor: 'black',
+        },
+        fontFamily: 'monospace',
+        collapseFacetAxes: true,
+        language: {
+          count: '',
+        },
+      })
+
+      var glDiv = viewer.presenter.getElement(SandDance.VegaMorphCharts.PresenterElement.gl)
+      var size = {
+        height: glDiv.offsetHeight,
+        width: glDiv.offsetWidth,
+      }
+
+      var insight = {
+        columns: {
+          color: 'publisher',
+          x: 'publisher',
+          y: 'publisher',
+          sort: 'publisher',
+          facet: null,
+        },
+        scheme: 'rainbow',
+        size,
+        hideAxes: false,
+        hideLegend: true,
+        signalValues: {
+          RoleX_BinsSignal: 20,
+          RoleZ_ProportionSignal: 1,
+          Text_ScaleSignal: 1.3,
+          RoleColor_BinCountSignal: 20,
+          Chart_PointScaleSignal: 1,
+          RoleZ_Grounded: false,
+        },
+        chart: 'barchartH',
+        view: '2d',
+      }
+
+      //fetch cars.json from vega website
+      fetch('data.json')
+        .then((response) => response.json())
+        .then((data) => {
+          viewer.render({ insight }, data)
+
+          document.getElementById('yaxis').addEventListener('change', function () {
+            insight.columns.y = this.value
+            viewer.render({ insight }, data)
+          })
+
+          document.getElementById('sortby').addEventListener('change', function () {
+            insight.columns.sort = this.value
+            viewer.render({ insight }, data)
+          })
+
+          document.getElementById('colorby').addEventListener('change', function () {
+            insight.columns.color = this.value
+            viewer.render({ insight }, data)
+          })
+
+          document.getElementById('facetby').addEventListener('change', function () {
+            var value = null
+            if (this.value === 'none') value = null
+            else value = this.value
+            insight.columns.facet = value
+            viewer.render({ insight }, data)
+          })
+        })
+    </script>
+  </body>
+</html>

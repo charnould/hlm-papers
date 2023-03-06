@@ -1,0 +1,46 @@
+{
+  "name": "hlm-papers",
+  "version": "0.0.0",
+  "author": "Charles-Henri Arnould <charnould@icloud.com>",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "lint": "npx eslint . --fix",
+    "format": "npx prettier format . --write",
+    "build": "ncu -u && npm install --no-package-lock && npm run lint && npm run format"
+  },
+  "dependencies": {
+    "better-sqlite3": "^8.1.0",
+    "cheerio": "^1.0.0-rc.12",
+    "crawlee": "^3.2.2",
+    "date-fns": "^2.29.3",
+    "puppeteer": "^19.7.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 170
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "ignorePatterns": [
+      "docs/assets/sanddance.js",
+      "docs/assets/vega.js"
+    ],
+    "env": {
+      "node": true,
+      "jest": true,
+      "es2021": true
+    },
+    "rules": {
+      "camelcase": "off"
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": true
+    }
+  }
+}

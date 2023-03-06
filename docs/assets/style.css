@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;700&display=swap');
+
+* {
+  box-sizing: content-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Public Sans', sans-serif;
+}
+
+header {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 20px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  padding: 30px 0px 0px 30px;
+}
+
+header > div > h1 {
+  color: rgb(248, 248, 248);
+  font-size: 37px;
+  letter-spacing: -1px;
+  word-spacing: 2px;
+  font-weight: 700;
+  padding: 0px;
+  margin: 0px;
+}
+
+header > div > p {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px 0px 0px 2px;
+  color: rgb(150, 150, 150);
+}
+
+header > div > a {
+  text-decoration: none;
+  color: rgb(110, 110, 110);
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px 0px 0px 3px;
+}
+
+header > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+}
+
+.change > p {
+  font-size: 13px;
+}
+
+select {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px;
+  outline: none;
+  border-radius: 2px;
+  border: 3px solid rgb(46, 46, 46);
+  color: rgb(255, 255, 255);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #000000;
+}
+
+body > p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9999;
+  color: white;
+  font-size: 30px;
+}
+
+#vis {
+  height: 100vh;
+}
+
+/* override SandDance styles */
+.sanddance-root {
+  display: grid;
+  grid-template-rows: 100%;
+}
+
+.sanddance-gl,
+.sanddance-panel {
+  position: unset;
+}
+
+.sanddance-panel {
+  display: none;
+}
+
+/* TOOLTIP */
+
+.sanddance-tooltip {
+  padding: 0px 2% 30px 2%;
+  display: block;
+  z-index: 9999;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 96%;
+  font-weight: 200;
+  font-size: 15px;
+  font-family: 'Public Sans', sans-serif;
+}
+
+.sanddance-tooltip td:first-child {
+  display: none;
+}
+
+.sanddance-tooltip tr:nth-child(1) {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.sanddance-tooltip tr:nth-child(2) {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(211, 211, 211);
+}
+
+.sanddance-tooltip tr:nth-child(5) {
+  font-size: 14px;
+  font-weight: 100;
+  color: rgb(152, 152, 152);
+}
+
+.sanddance-tooltip tr:nth-child(3),
+.sanddance-tooltip tr:nth-child(4),
+.sanddance-tooltip tr:nth-child(6),
+.sanddance-tooltip tr:nth-child(7) {
+  display: none;
+}
+
+/* BECKREL popup */
+
+.popup {
+  z-index: 9999;
+  position: absolute;
+  top: 150px;
+  right: 175px;
+  background: rgb(21, 21, 21);
+  padding: 8px 50px 8px 15px;
+  border-radius: 5px;
+  border: 2px solid rgb(27, 27, 27);
+  font-weight: 300;
+  color: rgb(209, 209, 209);
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.popup__close {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup > p {
+  margin: 0;
+  padding: 0;
+}
